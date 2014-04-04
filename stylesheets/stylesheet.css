@@ -58,6 +58,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+* {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
@@ -258,13 +266,17 @@ form {
 Full-Width Styles
 *******************************************************************************/
 
+.cl {
+    clear:both;
+}
+
 .outer {
   width: 100%;
 }
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 890px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -360,17 +372,58 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
+  float:left;
+  width:670px; 
+  margin:0;
+  box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
 }
 
 #footer_wrap {
   background: #212121;
 }
 
+.content {
+    max-width:890px;
+    margin:0 auto;
+}
+
+.leftBar {
+    border:solid 1px #dadada;
+    background-color:#fff;
+    float:right;
+    width:200px;
+    margin:40px 0;
+    padding:10px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+}
 
 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
+
+
+@media screen and (max-width: 889px) {
+
+    .leftBar {
+        max-width:100%;
+        width:100%;
+    }
+
+    #main_content {
+        width:100%;
+    }
+
+}
+
 
 @media screen and (max-width: 480px) {
   body {
